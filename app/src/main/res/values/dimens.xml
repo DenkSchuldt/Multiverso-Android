@@ -1,0 +1,42 @@
+<resources>
+
+    <dimen name="statusbar.height">25dp</dimen>
+    <dimen name="toolbar.height">56dp</dimen>
+
+    <dimen name="drawer.width">320dp</dimen>
+
+    <dimen name="separator.height">8dp</dimen>
+
+    <dimen name="margin">16dp</dimen>
+
+    <dimen name="avatar.width">40dp</dimen>
+    <dimen name="avatar.height">40dp</dimen>
+
+    <dimen name="icon.width">24dp</dimen>
+    <dimen name="icon.height">24dp</dimen>
+
+    <dimen name="subheader.text.size">14sp</dimen>
+    <dimen name="subheader.height">48dp</dimen>
+
+    <dimen name="list.item.singleline.height">48dp</dimen>
+    <dimen name="list.item.twolines.height">72dp</dimen>
+    <dimen name="list.item.primary.text">16sp</dimen>
+    <dimen name="list.item.secondary.text">14sp</dimen>
+
+    <dimen name="text.title">21sp</dimen>
+    <dimen name="text.button">15sp</dimen>
+    <dimen name="text.body">16sp</dimen>
+
+    <dimen name="button.height">36dp</dimen>
+    <dimen name="button.padding">8dp</dimen>
+
+    <dimen name="dialog.area.contents.padding">24dp</dimen>
+    <dimen name="dialog.area.buttons.height">52dp</dimen>
+    <dimen name="dialog.area.buttons.padding">8dp</dimen>
+    <dimen name="dialog.tittle.padding.bottom">20dp</dimen>
+    <dimen name="dialog.width">300dp</dimen>
+    <dimen name="dialog.height">300dp</dimen>
+
+    <dimen name="elevation">4dp</dimen>
+
+</resources>

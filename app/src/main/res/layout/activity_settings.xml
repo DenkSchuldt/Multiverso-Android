@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/toolbar"/>
+
+    <LinearLayout
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            style="@style/Subheader"
+            android:text="@string/settings.section.general"/>
+        <View style="@style/Separator"/>
+        <LinearLayout
+            android:id="@+id/settings.fetch.content.time"
+            style="@style/TwoLineListItem">
+            <TextView
+                style="@style/PrimaryText"
+                android:text="@string/settings.time.title"/>
+            <TextView
+                android:id="@+id/settings.fetch.time"
+                style="@style/SecondaryText"
+                android:text="0 minutos"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
