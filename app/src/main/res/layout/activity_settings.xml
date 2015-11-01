@@ -1,33 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
-        style="@style/toolbar"/>
-
     <LinearLayout
-        android:layout_below="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-        <TextView
-            style="@style/Subheader"
-            android:text="@string/settings.section.general"/>
-        <View style="@style/Separator"/>
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/toolbar"/>
+
         <LinearLayout
-            android:id="@+id/settings.fetch.content.time"
-            style="@style/TwoLineListItem">
+            android:layout_below="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
             <TextView
-                style="@style/PrimaryText"
-                android:text="@string/settings.time.title"/>
-            <TextView
-                android:id="@+id/settings.fetch.time"
-                style="@style/SecondaryText"
-                android:text="0 minutos"/>
+                style="@style/Subheader_Dark"
+                android:text="@string/settings.section.general"/>
+            <LinearLayout
+                android:id="@+id/settings.fetch.content.time"
+                style="@style/TwoLineListItem">
+                <TextView
+                    style="@style/TwoLineListItem_PrimaryText"
+                    android:text="@string/settings.fetch.content.time.title"/>
+                <TextView
+                    android:id="@+id/settings.fetch.content.time.label"
+                    style="@style/TwoLineListItem_SecondaryText"
+                    android:text="Cada 0 minutos"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/settings.delete.news.time"
+                style="@style/TwoLineListItem">
+                <TextView
+                    style="@style/TwoLineListItem_PrimaryText"
+                    android:text="@string/settings.delete.news.time.title"/>
+                <TextView
+                    android:id="@+id/settings.delete.news.time.label"
+                    style="@style/TwoLineListItem_SecondaryText"
+                    android:text="Cada 0 dias"/>
+            </LinearLayout>
         </LinearLayout>
+
+        <View style="@style/Separator"/>
+
+        <LinearLayout
+            android:layout_below="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                style="@style/Subheader_Dark"
+                android:text="@string/settings.section.about"/>
+            <LinearLayout
+                android:id="@+id/settings.version.name"
+                style="@style/TwoLineListItem">
+                <TextView
+                    style="@style/TwoLineListItem_PrimaryText"
+                    android:text="@string/app_name"/>
+                <TextView
+                    android:id="@+id/settings.version.label"
+                    style="@style/TwoLineListItem_SecondaryText"
+                    android:text="v1.0"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/settings.send.comments"
+                style="@style/TwoLineListItem">
+                <TextView
+                    style="@style/TwoLineListItem_PrimaryText"
+                    android:text="@string/settings.comments.title"/>
+                <TextView
+                    android:id="@+id/settings."
+                    style="@style/TwoLineListItem_SecondaryText"
+                    android:text="@string/settings.comments.label"/>
+            </LinearLayout>
+        </LinearLayout>
+
     </LinearLayout>
 
-</RelativeLayout>
+</ScrollView>

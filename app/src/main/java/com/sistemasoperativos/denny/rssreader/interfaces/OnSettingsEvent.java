@@ -5,6 +5,7 @@ package com.sistemasoperativos.denny.rssreader.interfaces;
  */
 public interface OnSettingsEvent {
 
-  public void onSettingsFetchTime();
+  void onSettingsFetchContentTime();
+  void onSettingsDeleteNewsTime();
 
 }

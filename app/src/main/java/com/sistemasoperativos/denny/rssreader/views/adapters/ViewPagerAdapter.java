@@ -5,11 +5,8 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.util.SparseArray;
 
-import com.sistemasoperativos.denny.rssreader.fragments.EntriesFragment;
-import com.sistemasoperativos.denny.rssreader.models.Entry;
+import com.sistemasoperativos.denny.rssreader.views.fragments.EntriesFragment;
 import com.sistemasoperativos.denny.rssreader.utils.Constants;
-
-import java.util.ArrayList;
 
 /**
  * Created by Denny on 8/8/2015.

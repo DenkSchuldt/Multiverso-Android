@@ -38,9 +38,10 @@
     <string name="feed.vida.y.estilo.salud">Salud</string>
     <string name="feed.vida.y.estilo.gente">Gente</string>
 
-    <string name="app_name">Multvierso</string>
+    <string name="app_name">Multiverso</string>
     <string name="shared.preferences.key">com.denny.multiverso</string>
-    <string name="shared.preferences.settings.time">settings.time</string>
+    <string name="shared.preferences.settings.fetch.content.time">multiverso.settings.fetch.content.time</string>
+    <string name="shared.preferences.settings.delete.news.time">multiverso.settings.delete.news.time</string>
 
     <string name="actionbar.title.main">Últimas noticias</string>
     <string name="actionbar.title.scheduled">Noticias guardadas</string>
@@ -51,9 +52,15 @@
     <string name="menu.action.settings">Configuraciones</string>
 
     <string name="settings.section.general">General</string>
-    <string name="settings.time.title">Tiempo para obtener nuevas noticias</string>
-    <string name="settings.time.unit.singular">minuto</string>
-    <string name="settings.time.unit.plural">minutos</string>
+    <string name="settings.fetch.content.time.title">Obtener nuevas noticias</string>
+    <string name="settings.fetch.content.time.unit.singular">minuto</string>
+    <string name="settings.fetch.content.time.unit.plural">minutos</string>
+    <string name="settings.delete.news.time.title">Borrar noticias anteriores</string>
+    <string name="settings.delete.news.time.unit.singular">día</string>
+    <string name="settings.delete.news.time.unit.plural">días</string>
+    <string name="settings.section.about">Acerca de</string>
+    <string name="settings.comments.title">Enviar comentarios</string>
+    <string name="settings.comments.label">Escribir un correo al desarrollador</string>
 
     <string name="font.regular">sans-serif</string>
     <string name="font.medium">sans-serif-medium</string>

@@ -7,9 +7,11 @@ import android.animation.ObjectAnimator;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.design.widget.TabLayout;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -28,12 +30,11 @@ import com.sistemasoperativos.denny.rssreader.R;
 import com.sistemasoperativos.denny.rssreader.database.DBHelper;
 import com.sistemasoperativos.denny.rssreader.database.db.EntryDB;
 import com.sistemasoperativos.denny.rssreader.database.db.ProducerDB;
-import com.sistemasoperativos.denny.rssreader.fragments.EntriesFragment;
+import com.sistemasoperativos.denny.rssreader.views.fragments.EntriesFragment;
 import com.sistemasoperativos.denny.rssreader.interfaces.OnEntryEvent;
 import com.sistemasoperativos.denny.rssreader.models.Entry;
 import com.sistemasoperativos.denny.rssreader.models.Producer;
 import com.sistemasoperativos.denny.rssreader.utils.Constants;
-import com.sistemasoperativos.denny.rssreader.utils.SlidingTabLayout;
 import com.sistemasoperativos.denny.rssreader.views.adapters.ViewPagerAdapter;
 
 import java.util.ArrayList;
@@ -73,7 +74,7 @@ public class MainActivity extends AppCompatActivity implements OnEntryEvent {
 
     populateNavigationDrawer();
     setCustomDrawerToggle();
-    setToolbar();
+    setupToolbar();
   }
 
   @Override
@@ -316,7 +317,8 @@ public class MainActivity extends AppCompatActivity implements OnEntryEvent {
     viewHolder.drawerLayout.setDrawerListener(drawerToggle);
   }
 
-  public void setToolbar() {
+  public void setupToolbar() {
+    viewHolder.toolbar.setTitleTextColor(Color.WHITE);
     setSupportActionBar(viewHolder.toolbar);
     getSupportActionBar().setTitle(getResources().getString(R.string.app_name));
   }
@@ -350,7 +352,7 @@ public class MainActivity extends AppCompatActivity implements OnEntryEvent {
 
   public int readFromSharedPreferences() {
     SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
-    int time = sharedPref.getInt(getString(R.string.shared_preferences_settings_time), 1);
+    int time = sharedPref.getInt(getString(R.string.shared_preferences_settings_fetch_content_time), 1);
     return time;
   }
 
@@ -371,10 +373,13 @@ public class MainActivity extends AppCompatActivity implements OnEntryEvent {
     public void findActivityViews() {
       drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
       toolbar = (Toolbar) findViewById(R.id.toolbar);
-      viewPager = (ViewPager) findViewById(R.id.pager);
+      viewPager = (ViewPager) findViewById(R.id.viewPager);
       adapter =  new ViewPagerAdapter(getSupportFragmentManager());
       viewPager.setAdapter(adapter);
-      tabs = (TabLayout) findViewById(R.id.tabs);
+      tabs = (TabLayout) findViewById(R.id.tabLayout);
+      tabs.setTabTextColors(
+          ContextCompat.getColor(getApplicationContext(),R.color.secondary_text_default_material_light),
+          Color.WHITE);
       tabs.setupWithViewPager(viewPager);
       drawerListNoticias = (LinearLayout) findViewById(R.id.drawer_list_noticias);
       drawerListOpinion = (LinearLayout) findViewById(R.id.drawer_list_opinion);

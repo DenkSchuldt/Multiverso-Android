@@ -5,9 +5,10 @@
 
     <dimen name="drawer.width">320dp</dimen>
 
-    <dimen name="separator.height">8dp</dimen>
+    <dimen name="separator.height">0.5dp</dimen>
 
     <dimen name="margin">16dp</dimen>
+    <dimen name="padding">16dp</dimen>
 
     <dimen name="avatar.width">40dp</dimen>
     <dimen name="avatar.height">40dp</dimen>
